@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+}
+
+compileJava {
+    sourceCompatibility = targetCompatibility = 8
+}
+
+group 'io.github.sdxqw'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'io.github.sdxqw'
+            artifactId = 'WinzLogger'
+            version = '1.0'
+            from components.java
+        }
+    }
+}
