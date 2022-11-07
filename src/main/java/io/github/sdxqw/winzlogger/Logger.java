@@ -9,6 +9,14 @@ public class Logger {
     private static final SimpleDateFormat date = new SimpleDateFormat("HH:mm:ss", Locale.getDefault());
     private static final String GETDATE = date.format(new Date());
 
+    /**
+     * Basic logger that can be used everywhere
+     *
+     * @param toPrint <T> Object to print
+     * @param level LogLevel level of the logger
+     * @param <T> Can be anything you want from string
+     *           to an int or a class
+     */
     public static <T> void print(T toPrint, LogLevel level) {
         switch (level) {
             case INFO:
